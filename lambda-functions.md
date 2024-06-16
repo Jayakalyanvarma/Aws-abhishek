@@ -11,13 +11,16 @@ The benefits of AWS Lambda include automatic scaling, reduced operational overhe
 AWS Lambda functions can be triggered by various event sources, such as changes in Amazon S3 objects, updates to Amazon DynamoDB tables, HTTP requests through Amazon API Gateway, and more.
 
 ### 5. How is concurrency managed in AWS Lambda?
-Lambda automatically handles concurrency by scaling out instances of your function in response to incoming requests. You can set a concurrency limit to control how many concurrent executions are allowed.
+Aws lambda automatically scales horizontally to handle incoming requests. You can set a concurrency limit to control how many concurrent executions are allowed.
 
 ### 6. What is the maximum execution duration for a single AWS Lambda invocation?
 The maximum execution duration for a single Lambda invocation is 15 minutes.
 
 ### 7. How do you pass data to and from AWS Lambda functions?
 You can pass data to Lambda functions through event objects, which contain information about the triggering event. You can also return data by using the return statement or creating a response object.
+
+### What is the event object in Lambda?
+An event is a JSON-formatted document that contains data for a Lambda function to process. The Lambda runtime converts the event to an object and passes it to your function code.
 
 ### 8. Can AWS Lambda functions communicate with external resources?
 Yes, Lambda functions can communicate with external resources such as databases, APIs, and other AWS services by using appropriate SDKs and APIs provided by AWS.
@@ -57,3 +60,21 @@ Yes, Lambda functions can connect to on-premises resources by placing the functi
 
 ### 20. What is the Cold Start issue in AWS Lambda?
 The Cold Start issue occurs when a Lambda function is invoked for the first time or after it has been idle for a while. The function needs to be initialized, causing a slight delay in response time.
+
+### 21.what is deployment package in lambda?
+A deployment package in AWS Lambda is a ZIP file (or JAR file for Java) that contains your function code and any dependencies to run lambda function.
+
+### lambda
+Serverless: No server management required; AWS handles the infrastructure. Ideal for event-driven applications, short-lived processes, and microservices.
+Scalability: Automatically scales up and down based on the number of incoming requests. No need to manage instances or worry about scaling policies.
+Pricing: Pay-per-use model; billed based on the number of requests and the duration of execution. Includes 1 million free requests and 400,000 GB-seconds of compute time per month.
+Execution Duration: Maximum execution time of 15 minutes per invocation. Suitable for short-lived tasks.
+Use Cases: Examples include real-time file processing, data transformation, and backend for web/mobile applications.
+
+
+### Ec2
+server-Based: Provides resizable compute capacity in the cloud; requires managing the underlying infrastructure. Suitable for long-running applications and custom environments.
+Scalability: Manual or automated scaling via Auto Scaling Groups. Requires configuration of scaling policies and management of instance lifecycle.
+Pricing: Pay based on the instance type, size, and running time. Options include On-Demand, Reserved Instances, and Spot Instances.
+Execution Duration: No inherent execution time limit; instances can run indefinitely. Ideal for workloads needing consistent and predictable performance.
+Use Cases: Examples include web servers, database servers, and custom applications requiring specific configurations.
