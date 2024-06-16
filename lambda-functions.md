@@ -2,7 +2,7 @@
 AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. It automatically scales and manages the infrastructure required to run your code in response to events.
 
 ### 2. How does AWS Lambda work?
-You can upload your code to Lambda and define event sources that trigger the execution of your code. Lambda automatically manages the execution environment, scales it as needed, and provides monitoring and logging.
+You can upload your code to Lambda. AWS Lambda  runs code in response to events and automatically scales based on demand, allowing developers to focus on writing code without managing infrastructure. and provides monitoring and logging.
 
 ### 3. What are the key benefits of using AWS Lambda?
 The benefits of AWS Lambda include automatic scaling, reduced operational overhead, cost efficiency (as you pay only for the compute time used), and the ability to build event-driven architectures.
@@ -26,7 +26,7 @@ An event is a JSON-formatted document that contains data for a Lambda function t
 Yes, Lambda functions can communicate with external resources such as databases, APIs, and other AWS services by using appropriate SDKs and APIs provided by AWS.
 
 ### 9. What are AWS Lambda layers?
-AWS Lambda layers are a way to manage and share code that is common across multiple functions. Layers can include libraries, custom runtimes, and other function dependencies.
+Lambda Layers are reusable packages of code, libraries, and dependencies that can be shared across multiple AWS Lambda functions, enabling easier maintenance and promoting code reuse.
 
 ### 10. How can you handle errors in AWS Lambda functions?
 You can handle errors by using try-catch blocks in your code. Lambda also provides CloudWatch Logs for monitoring, and you can set up error handling and retries for asynchronous invocations.
