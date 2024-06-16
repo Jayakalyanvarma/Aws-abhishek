@@ -4,8 +4,10 @@ Amazon CloudFront is a Content Delivery Network (CDN) service provided by AWS th
 ### 2. How does CloudFront work?
 CloudFront caches content in edge locations globally. When a user requests content, CloudFront delivers it from the nearest edge location, reducing latency and improving performance.
 
+### caching is a mechanism used to temporarily store copies of your content at edge locations closer to end-users. 
+
 ### 3. What are edge locations in CloudFront?
-Edge locations are data centers globally distributed by CloudFront. They store cached content and serve it to users, minimizing the distance data needs to travel.
+Edge locations are data centers located in multiple geographic locations worldwide. CloudFront caches copies of your content at these edge locations, allowing users to access it with lower latency and higher transfer speeds.
 
 ### 4. What types of distributions are available in CloudFront?
 CloudFront offers Web Distributions for websites and RTMP Distributions for media streaming.
